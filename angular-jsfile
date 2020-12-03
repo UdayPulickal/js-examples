@@ -1,0 +1,27 @@
+var myApp = angular
+			.module("myModule", [])
+      .controller("myController", function($scope) {
+      var technologies=[
+      {name:"Java",likes:0,dislike:0},
+      {name:"JSP",likes:0,dislike:0},
+      {name:"Python",likes:0,dislike:0},
+      {name:"AngularJs",likes:0,dislike:0}
+      ];
+      $scope.technology=technologies;
+      $scope.incrementlikes=function(tech)
+      {
+      tech.likes++;
+      }
+      $scope.incrementdislikes=function(tech)
+      {
+      tech.dislike++;
+      }
+      $scope.decrementlikes=function(tech)
+      {
+      tech.likes--;
+      }
+      $scope.decrementdislikes=function(tech)
+      {
+      tech.dislike--;
+      }
+      });
